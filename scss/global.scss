@@ -25,9 +25,9 @@ body {
 }
 
 :is(h1, h2, h3) {
-	font-weight: 500;
+	font-weight: 700;
 	line-height: 1.1;
-	color: var(--clr-primary-100);
+	color: var(--clr-primary-200);
 }
 
 h1 {
@@ -45,10 +45,10 @@ h3 {
 a {
 	transition: all 200ms;
 	text-decoration: none;
-	color: var(--clr-neutral-500);
+	color: var(--clr-neutral-400);
 
 	&:hover {
-		color: var(--clr-primary-200);
+		color: var(--clr-neutral-300);
 	}
 }
 
@@ -58,12 +58,13 @@ a {
 
 @import "utilities/center-content";
 @import "utilities/container";
-@import "utilities/flow-section";
-@import "utilities/flow-content";
-@import "utilities/visually-hidden";
-@import "utilities/outline";
-@import "utilities/split";
 @import "utilities/cta";
+@import "utilities/flow-content";
+@import "utilities/flow-section";
+@import "utilities/outline";
+@import "utilities/skip-link";
+@import "utilities/split";
+@import "utilities/visually-hidden";
 
 /* ==================================================
    Blocks

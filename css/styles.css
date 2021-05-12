@@ -134,9 +134,9 @@ body {
 }
 
 :is(h1, h2, h3) {
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.1;
-  color: var(--clr-primary-100);
+  color: var(--clr-primary-200);
 }
 
 h1 {
@@ -154,10 +154,10 @@ h3 {
 a {
   transition: all 200ms;
   text-decoration: none;
-  color: var(--clr-neutral-500);
+  color: var(--clr-neutral-400);
 }
 a:hover {
-  color: var(--clr-primary-200);
+  color: var(--clr-neutral-300);
 }
 
 /* ==================================================
@@ -179,6 +179,26 @@ a:hover {
   padding-left: clamp(1rem, 5%, 4rem);
 }
 
+.cta {
+  display: inline-block;
+  padding: 0.5em 1.5em 0.6em;
+  border: none;
+  border-radius: 2em;
+  background: var(--clr-primary-100);
+  font-weight: 700;
+  color: var(--clr-neutral-100);
+  cursor: pointer;
+}
+.cta:hover {
+  background: rgba(242, 95, 58, 0.75);
+  color: var(--clr-neutral-100);
+}
+
+/* Add vertical rhythm inside elements */
+.flow-content > * + * {
+  margin-top: 1em;
+}
+
 /* Add vertical rhythm between sections */
 .flow-section > * + * {
   margin-top: 4rem;
@@ -189,9 +209,65 @@ a:hover {
   }
 }
 
-/* Add vertical rhythm inside elements */
-.flow-content > * + * {
-  margin-top: 1em;
+/* Add styled focus states on tab not hover */
+:focus-visible {
+  outline: 3px dotted var(--clr-primary-100);
+  outline-offset: 0.25rem;
+}
+
+:focus:not(:focus-visible) {
+  outline: transparent;
+}
+
+/* Skip to main content */
+.skip-link {
+  position: absolute;
+  display: inline-block;
+  top: 1rem;
+  left: 1rem;
+  z-index: 100000;
+  padding: 0.7rem 1rem 0.5rem 1rem;
+  outline: 3px dotted black;
+  background-color: black;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+
+.skip-link:hover {
+  background: white;
+  color: black;
+}
+
+.skip-link:not(:focus) {
+  position: absolute;
+  width: 1px;
+  height: auto;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  margin: 0;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Remove necessary focus style as main is the :target */
+main:focus {
+  outline: none;
+}
+
+/* Align flex children at small and large viewports */
+.split {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--spacer);
+}
+@media (min-width: 45em) {
+  .split {
+    flex-direction: row;
+  }
 }
 
 /* Text accessible only for screen readers */
@@ -223,44 +299,6 @@ a:hover {
   text-decoration: none;
   color: white;
   clip: auto !important;
-}
-
-/* Add styled focus states on tab not hover */
-:focus-visible {
-  outline: 3px dotted var(--clr-primary-100);
-  outline-offset: 0.25rem;
-}
-
-:focus:not(:focus-visible) {
-  outline: transparent;
-}
-
-/* Align flex children at small and large viewports */
-.split {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: var(--spacer);
-}
-@media (min-width: 45em) {
-  .split {
-    flex-direction: row;
-  }
-}
-
-.cta {
-  display: inline-block;
-  padding: 0.75em 1.5em;
-  border: none;
-  border-radius: 2em;
-  background: linear-gradient(to right, #31d35c, #2bb7da);
-  font-weight: 700;
-  color: var(--clr-neutral-100);
-  cursor: pointer;
-}
-.cta:hover {
-  background: linear-gradient(to right, rgba(49, 211, 92, 0.75), rgba(43, 183, 218, 0.75));
-  color: var(--clr-neutral-100);
 }
 
 /* ==================================================
@@ -381,14 +419,14 @@ header {
   padding-right: clamp(1rem, 5%, 4rem);
   padding-left: clamp(1rem, 5%, 4rem);
   overflow-y: auto;
-  background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   -webkit-overflow-scrolling: touch;
 }
 
 .burger-menu[enabled=true] .navigation {
   padding: 2rem;
-  border-radius: 0.5em;
-  box-shadow: 0 20px 40px var(--clr-neutral-500);
+  border-radius: 0.25em;
+  box-shadow: 0 10px 40px var(--clr-neutral-400);
   background-color: var(--clr-neutral-100);
 }
 .burger-menu[enabled=true] .navigation > ul {

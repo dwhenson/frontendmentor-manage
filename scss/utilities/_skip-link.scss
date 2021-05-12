@@ -7,17 +7,17 @@
 	left: 1rem;
 	z-index: 100000;
 	padding: 0.7rem 1rem 0.5rem 1rem;
-	outline: 3px dotted white;
-	background-color: white;
+	outline: 3px dotted black;
+	background-color: black;
 	font-weight: 700;
 	text-decoration: none;
 	text-transform: uppercase;
-	color: black;
+	color: white;
 }
 
 .skip-link:hover {
-	background: black;
-	color: white;
+	background: white;
+	color: black;
 }
 
 .skip-link:not(:focus) {
