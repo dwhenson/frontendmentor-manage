@@ -8,4 +8,13 @@
 		flex-direction: row-reverse;
 		align-items: center;
 	}
+
+	img {
+		margin-right: auto;
+		margin-left: auto;
+
+		@include respond-to("medium") {
+			margin-right: 0;
+		}
+	}
 }
