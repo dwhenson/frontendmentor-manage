@@ -102,6 +102,7 @@
 	cursor: pointer;
 }
 
+// CHECK: Check if need to disable scroll or not?
 // Hamburger menu panel size and positioning
 .burger-menu[enabled="true"] .burger-menu__panel {
 	position: absolute;
@@ -116,15 +117,15 @@
 	padding-right: clamp(1rem, 5%, 4rem);
 	padding-left: clamp(1rem, 5%, 4rem);
 	overflow-y: auto;
-	background: linear-gradient(to bottom, hsla(0, 0%, 0%, 1), hsla(0, 0%, 0%, 0));
+	background: linear-gradient(to top, hsla(0, 0%, 0%, 0.5), hsla(0, 0%, 0%, 0));
 	-webkit-overflow-scrolling: touch;
 }
 
 // Hamburger menu panel contents size and positioning
 .burger-menu[enabled="true"] .navigation {
 	padding: 2rem;
-	border-radius: 0.5em;
-	box-shadow: 0 20px 40px var(--clr-neutral-500);
+	border-radius: 0.25em;
+	box-shadow: 0 10px 40px var(--clr-neutral-400);
 	background-color: var(--clr-neutral-100);
 
 	> ul {
