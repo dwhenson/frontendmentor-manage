@@ -332,6 +332,7 @@ header {
   gap: 2rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+  margin-top: 2rem;
 }
 .site-head__inner burger-menu .navigation ul {
   display: flex;
@@ -579,19 +580,22 @@ header {
   padding-top: 3rem;
   padding-bottom: 3rem;
   margin-top: 0;
-  background-color: var(--clr-primary-200);
+  background-color: var(--clr-neutral-400);
   color: var(--clr-neutral-100);
+}
+.footer ul:not([class=icons]) li:not(:first-of-type) {
+  margin-top: 1rem;
 }
 .footer a {
   color: var(--clr-neutral-100);
 }
 .footer a:hover:not(.cta) {
-  color: var(--clr-primary-200);
+  color: var(--clr-primary-100);
 }
 .footer .navigation {
-  flex-basis: 60%;
+  flex-basis: 30%;
 }
-.footer .wrapper:first-of-type {
+.footer .wrapper.images {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -604,8 +608,8 @@ header {
 .footer .logo svg path {
   fill: var(--clr-neutral-100);
 }
-.footer .logo svg:hover path {
-  fill: var(--clr-primary-200);
+.footer .logo svg g {
+  fill: var(--clr-primary-100);
 }
 @media (min-width: 45em) {
   .footer .logo {
@@ -619,16 +623,43 @@ header {
   gap: 0.75em;
 }
 .footer .icons svg:hover path {
-  fill: var(--clr-primary-200);
+  fill: var(--clr-primary-100);
 }
-.footer .cta {
-  align-self: center;
+.footer .wrapper.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer form > .wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.footer form > .wrapper input {
+  padding-left: 1em;
+  border: none;
+  border-radius: 2em;
+  line-height: 2.5em;
+}
+.footer form > .wrapper input::placeholder {
+  font-size: var(--step--1);
+}
+.footer form > .wrapper .cta {
+  max-width: min-content;
+}
+.footer .validate {
+  visibility: hidden;
+  font-size: var(--step--1);
+}
+.footer .validate.error {
+  visibility: revert;
+  color: red;
+}
+.footer p.small {
+  color: var(--clr-neutral-300);
 }
 @media (min-width: 45em) {
-  .footer .cta {
-    align-self: flex-end;
+  .footer p.small {
+    text-align: right;
   }
-}
-.footer small {
-  color: var(--clr-neutral-400);
 }
