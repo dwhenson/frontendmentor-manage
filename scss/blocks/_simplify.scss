@@ -2,6 +2,8 @@
    ------------------- */
 .simplify {
 	width: 100vw;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
 	margin-left: calc(50% - 50vw);
 	background-color: var(--clr-primary-100);
 
@@ -10,8 +12,6 @@
 
 		> h2 {
 			max-width: 20ch;
-			padding-top: 3rem;
-			padding-bottom: 3rem;
 			color: var(--clr-neutral-100);
 		}
 
