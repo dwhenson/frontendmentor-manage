@@ -3,5 +3,33 @@
 .different {
 	ol {
 		margin-top: 0;
+		list-style: none;
+	}
+
+	li {
+		position: relative;
+		padding-left: 5rem;
+		counter-increment: li;
+
+		&:not(:first-of-type) {
+			margin-top: 3rem;
+		}
+
+		&::before {
+			content: counter(li);
+			position: absolute;
+			display: inline-block;
+			top: 0;
+			left: 0;
+			width: 3.5rem;
+			height: 2rem;
+			border-radius: 1em;
+			margin-right: 1rem;
+			background-color: var(--clr-primary-100);
+			font-weight: 700;
+			line-height: 2rem;
+			text-align: center;
+			color: var(--clr-neutral-100);
+		}
 	}
 }
