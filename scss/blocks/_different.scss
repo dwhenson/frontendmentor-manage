@@ -2,14 +2,19 @@
    ------------------- */
 .different {
 	ol {
+		padding-left: 0;
 		margin-top: 0;
 		list-style: none;
+		text-align: left;
 	}
 
 	li {
 		position: relative;
-		padding-left: 5rem;
 		counter-increment: li;
+
+		@include respond-to("medium") {
+			padding-left: 5rem;
+		}
 
 		&:not(:first-of-type) {
 			margin-top: 3rem;
@@ -24,12 +29,26 @@
 			width: 3.5rem;
 			height: 2rem;
 			border-radius: 1em;
-			margin-right: 1rem;
 			background-color: var(--clr-primary-100);
 			font-weight: 700;
 			line-height: 2rem;
 			text-align: center;
 			color: var(--clr-neutral-100);
+		}
+
+		h3 {
+			padding-left: 2rem;
+			margin-right: -2rem;
+			margin-left: 2rem;
+			background-color: hsla(12, 88%, 59%, 0.1);
+			line-height: 2rem;
+
+			@include respond-to("medium") {
+				padding-left: 0;
+				margin-right: 0;
+				margin-left: 0;
+				background-color: inherit;
+			}
 		}
 	}
 }
