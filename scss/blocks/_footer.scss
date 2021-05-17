@@ -9,7 +9,15 @@
 	background-color: var(--clr-neutral-400);
 	color: var(--clr-neutral-100);
 
-	ul:not([class="icons"]) li:not(:first-of-type) {
+	> .container.split {
+		flex-direction: column-reverse;
+
+		@include respond-to("medium") {
+			flex-direction: row;
+		}
+	}
+
+	.flow-content > * + * {
 		margin-top: 1rem;
 	}
 
@@ -23,81 +31,105 @@
 
 	.navigation {
 		flex-basis: 30%;
-	}
-
-	.wrapper.images {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
+		flex-direction: column-reverse;
 		gap: 1rem;
-	}
+		// flex-wrap: wrap;
 
-	.logo {
-		margin-right: auto;
-		margin-left: auto;
+		.images {
+			display: flex;
+			flex-direction: column-reverse;
+			justify-content: space-between;
+			gap: 2rem;
 
-		svg path {
-			fill: var(--clr-neutral-100);
-		}
+			@include respond-to("medium") {
+				flex-direction: column;
+			}
 
-		svg g {
-			fill: var(--clr-primary-100);
-		}
+			.logo {
+				margin-right: auto;
+				margin-left: auto;
 
-		@include respond-to("medium") {
-			margin-right: auto;
-			margin-left: 0;
-		}
-	}
+				svg .text {
+					fill: var(--clr-neutral-100);
+				}
 
-	.icons {
-		display: flex;
-		justify-content: center;
-		gap: 0.75em;
+				@include respond-to("medium") {
+					margin-right: auto;
+					margin-left: 0;
+				}
+			}
 
-		svg:hover path {
-			fill: var(--clr-primary-100);
-		}
-	}
+			.icons {
+				display: flex;
+				justify-content: space-around;
+				gap: 0.75em;
+				margin-top: 2rem;
 
-	.wrapper.form {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-	}
+				svg:hover path {
+					fill: var(--clr-primary-100);
+				}
 
-	form > .wrapper {
-		display: flex;
-		justify-content: space-between;
-		gap: 0.5rem;
-
-		input {
-			padding-left: 1em;
-			border: none;
-			border-radius: 2em;
-			line-height: 2.5em;
-
-			&::placeholder {
-				font-size: var(--step--1);
+				@include respond-to("medium") {
+					justify-content: flex-start;
+				}
 			}
 		}
 
-		.cta {
-			max-width: min-content;
+		.nav-inner {
+			display: flex;
+			justify-content: space-around;
+			text-align: left;
+
+			@include respond-to("medium") {
+				justify-content: space-between;
+			}
+		}
+
+		@include respond-to("medium") {
+			flex-direction: row;
 		}
 	}
 
-	.validate {
-		visibility: hidden;
-		font-size: var(--step--1);
-	}
+	.form {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 
-	.validate.error {
-		visibility: revert;
-		color: red;
+		form > .wrapper {
+			display: flex;
+			gap: 0.5rem;
+
+			input {
+				flex: 1;
+				padding-left: 1em;
+				border: none;
+				border-radius: 2em;
+				line-height: 2.5em;
+
+				&::placeholder {
+					font-size: var(--step--1);
+				}
+			}
+
+			.cta {
+				max-width: min-content;
+			}
+		}
+
+		.validate {
+			visibility: hidden;
+			margin-left: 1rem;
+			font-size: var(--step--1);
+		}
+
+		.validate.error {
+			visibility: revert;
+			color: red;
+		}
 	}
 
 	p.small {
+		margin-top: 2rem;
 		color: var(--clr-neutral-300);
 
 		@include respond-to("medium") {

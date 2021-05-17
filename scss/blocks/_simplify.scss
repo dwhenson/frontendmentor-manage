@@ -19,6 +19,10 @@
 			max-width: max-content;
 			background-color: var(--clr-neutral-100);
 			color: var(--clr-primary-100);
+
+			&:hover {
+				color: hsla(12, 88%, 59%, 0.75);
+			}
 		}
 	}
 }
