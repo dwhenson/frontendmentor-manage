@@ -23,7 +23,6 @@ function emailIsValid(email) {
  * @param      {object}   The event object
  */
 function validateEmailKeydown(event) {
-	console.log(emailIsValid(event.target.value));
 	if (emailIsValid(event.target.value)) {
 		errorField.classList.remove("error");
 	} else {
@@ -35,14 +34,12 @@ function validateEmailKeydown(event) {
  * Check input for valid email on form submission
  * @param      {object}   The event object
  */
-function validateEmailSubmission(event) {
-	// CHECK: Why is this always false??
-	console.log(emailIsValid(event.target.value));
-	if (emailIsValid(event.target.value)) {
+function validateEmailSubmission(inputToCheck) {
+	if (emailIsValid(inputToCheck.value)) {
 		form.submit();
 	} else {
 		errorField.classList.add("error");
-		emailField.addEventListener("keydown", validateEmailKeydown);
+		inputToCheck.addEventListener("keydown", validateEmailKeydown);
 	}
 }
 
@@ -51,7 +48,6 @@ function validateEmailSubmission(event) {
 
 submitForm.addEventListener("click", function (event) {
 	event.preventDefault();
-	// TODO: add in fix to check if already exists
 	form.setAttribute("novalidate", "");
-	validateEmailSubmission(event);
+	validateEmailSubmission(emailField);
 });
