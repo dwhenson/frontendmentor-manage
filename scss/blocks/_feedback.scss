@@ -1,0 +1,40 @@
+/* Feedback - section
+   ------------------- */
+.feedback {
+	text-align: center;
+
+	ul {
+		display: flex;
+		gap: 2rem;
+		margin-top: 3rem;
+
+		> li {
+			flex: 1;
+			border-radius: 1rem;
+			background-color: hsla(227, 12%, 61%, 0.1);
+		}
+	}
+
+	.review {
+		flex-direction: column;
+		gap: 1rem;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+
+		img {
+			max-width: 5rem;
+			margin-top: -3.5rem;
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		.name {
+			font-weight: 700;
+		}
+	}
+
+	.cta {
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
