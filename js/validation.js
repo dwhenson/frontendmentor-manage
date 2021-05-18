@@ -51,3 +51,13 @@ submitForm.addEventListener("click", function (event) {
 	form.setAttribute("novalidate", "");
 	validateEmailSubmission(emailField);
 });
+
+/* Set up carousel - order of JS matters?
+ */
+
+const siemaContainerTest = document.querySelector("#text");
+let width = window.matchMedia("(max-width: 45em)");
+if (width.matches) {
+	console.log(siemaContainerTest);
+	siemaContainerTest.classList.add("siema");
+}

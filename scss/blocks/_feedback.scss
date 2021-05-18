@@ -11,23 +11,25 @@
 		gap: 2rem;
 		margin-top: 6rem;
 
-		li {
-			width: 100%;
-			overflow: visible;
-			margin-top: 3rem;
+		@include respond-to("medium") {
+			display: flex;
+		}
 
-			&:first-of-type {
-				display: flex;
+		li {
+			display: flex;
+			max-width: 100%;
+			margin-top: 3rem;
+		}
+
+		&:not(.siema) {
+			li {
+				display: block;
+				min-width: 35rem;
+				max-width: 50rem;
 			}
 
-			@include respond-to("medium") {
-				display: block;
-				// min-width: 35rem;
-				// max-width: 50rem;
-
-				&:last-of-type {
-					// display: none;
-				}
+			li:last-of-type {
+				display: none;
 			}
 		}
 	}
@@ -52,6 +54,10 @@
 			margin-top: 2rem;
 			font-weight: 700;
 		}
+	}
+
+	.buttons {
+		display: none;
 	}
 
 	.btn {

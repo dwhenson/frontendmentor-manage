@@ -1,15 +1,7 @@
 const mySiema = new Siema();
-// const btn0 = document.querySelector(".btn0");
-// const btn1 = document.querySelector(".btn1");
-// const btn2 = document.querySelector(".btn2");
-// const btn3 = document.querySelector(".btn3");
-
-// btn0.addEventListener("click", () => mySiema.goTo(0));
-// btn1.addEventListener("click", () => mySiema.goTo(1));
-// btn2.addEventListener("click", () => mySiema.goTo(2));
-// btn3.addEventListener("click", () => mySiema.goTo(3));
-
 const buttons = Array.from(document.querySelectorAll(".btn"));
+const buttonContainer = document.querySelector(".buttons");
+const siemaContainer = document.querySelector("#text");
 
 function updateStyles(event) {
 	buttons.forEach(function (button) {
@@ -28,4 +20,11 @@ function clickHander(event) {
 	});
 }
 
+// let width = window.matchMedia("(max-width: 45em)");
+// if (width.matches) {
+// 	console.log(siemaContainer);
+// 	siemaContainer.classList.add("siema");
+// }
+
+buttonContainer.style.display = "block";
 document.addEventListener("click", clickHander);

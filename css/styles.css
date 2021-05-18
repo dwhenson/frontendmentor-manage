@@ -569,18 +569,23 @@ main:focus {
   gap: 2rem;
   margin-top: 6rem;
 }
+@media (min-width: 45em) {
+  .feedback ul {
+    display: flex;
+  }
+}
 .feedback ul li {
-  width: 100%;
-  overflow: visible;
+  display: flex;
+  max-width: 100%;
   margin-top: 3rem;
 }
-.feedback ul li:first-of-type {
-  display: flex;
+.feedback ul:not(.siema) li {
+  display: block;
+  min-width: 35rem;
+  max-width: 50rem;
 }
-@media (min-width: 45em) {
-  .feedback ul li {
-    display: block;
-  }
+.feedback ul:not(.siema) li:last-of-type {
+  display: none;
 }
 .feedback .review {
   position: relative;
@@ -600,6 +605,9 @@ main:focus {
 .feedback .review .name {
   margin-top: 2rem;
   font-weight: 700;
+}
+.feedback .buttons {
+  display: none;
 }
 .feedback .btn {
   width: 1rem;
