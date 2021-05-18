@@ -11,14 +11,26 @@
 		gap: 2rem;
 		margin-top: 6rem;
 
+		// NOTE: Display settings set up for carousel
+
 		> li {
+			display: none;
 			width: 100%;
 			border-radius: 1rem;
 			background-color: #f0f0f0;
 
+			&:first-of-type {
+				display: flex;
+			}
+
 			@include respond-to("medium") {
+				display: block;
 				min-width: 35rem;
 				max-width: 50rem;
+
+				&:last-of-type {
+					display: none;
+				}
 			}
 		}
 	}
