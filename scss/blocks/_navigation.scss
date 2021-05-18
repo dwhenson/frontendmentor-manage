@@ -29,15 +29,7 @@
 	}
 
 	a:not(.cta):hover {
-		color: var(--clr-neutral-500);
-	}
-
-	a:not(.cta):hover::before {
-		content: "";
-		position: absolute;
-		bottom: -2.3rem;
-		width: 100%;
-		border-bottom: 5px solid var(--clr-primary-200);
+		color: var(--clr-neutral-300);
 	}
 
 	.cta {

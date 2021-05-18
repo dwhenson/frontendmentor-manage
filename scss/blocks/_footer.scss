@@ -11,10 +11,14 @@
 
 	> .container.split {
 		flex-direction: column-reverse;
-		gap: 2em;
+		gap: 2rem;
 
 		@include respond-to("medium") {
 			flex-direction: row;
+		}
+
+		@include respond-to("large") {
+			gap: 12rem;
 		}
 	}
 

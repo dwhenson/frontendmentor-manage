@@ -38,6 +38,12 @@ body {
 	}
 }
 
+#main {
+	grid-column: 1 / -1;
+	padding: 0 calc((100% - 1440px) / 2);
+	overflow: hidden;
+}
+
 :is(h1, h2, h3) {
 	font-weight: 700;
 	line-height: 1.1;
