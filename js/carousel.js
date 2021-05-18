@@ -1,8 +1,15 @@
+/* ====================================================
+   Variables
+   ==================================================== */
+
 const mySiema = new Siema();
 const buttons = Array.from(document.querySelectorAll(".btn"));
 const buttonContainer = document.querySelector(".buttons");
 const siemaContainer = document.querySelector("#text");
 
+/* ====================================================
+   Functions
+   ==================================================== */
 function updateStyles(event) {
 	buttons.forEach(function (button) {
 		button.classList.remove("selected");
@@ -20,11 +27,9 @@ function clickHander(event) {
 	});
 }
 
-// let width = window.matchMedia("(max-width: 45em)");
-// if (width.matches) {
-// 	console.log(siemaContainer);
-// 	siemaContainer.classList.add("siema");
-// }
+/* ====================================================
+   Inits and Event Listeners
+   ==================================================== */
 
 buttonContainer.style.display = "block";
 document.addEventListener("click", clickHander);

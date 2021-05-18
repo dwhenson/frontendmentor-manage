@@ -568,6 +568,7 @@ main:focus {
   justify-content: center;
   gap: 2rem;
   margin-top: 6rem;
+  /* Styles without carousel */
 }
 @media (min-width: 45em) {
   .feedback ul {
