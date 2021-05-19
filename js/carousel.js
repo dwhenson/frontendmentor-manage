@@ -2,7 +2,7 @@
    Variables
    ==================================================== */
 
-const mySiema = new Siema();
+const mySiema = new Siema({ draggable: false, multipleDrag: false });
 const buttons = Array.from(document.querySelectorAll(".btn"));
 const buttonContainer = document.querySelector(".buttons");
 const siemaContainer = document.querySelector("#text");

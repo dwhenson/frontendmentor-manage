@@ -52,6 +52,11 @@
 			.logo {
 				margin-right: auto;
 				margin-left: auto;
+				margin-top: 1rem;
+
+				@include respond-to("medium") {
+					margin-top: 0;
+				}
 
 				svg .text {
 					fill: var(--clr-neutral-100);

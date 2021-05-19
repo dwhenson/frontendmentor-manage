@@ -486,9 +486,6 @@ main:focus {
    ================================================== */
 /* Intro - section
    ------------------- */
-.intro {
-  margin-top: -3rem;
-}
 @media (min-width: 45em) {
   .intro {
     flex-direction: row-reverse;
@@ -705,6 +702,12 @@ main:focus {
 .footer .navigation .images .logo {
   margin-right: auto;
   margin-left: auto;
+  margin-top: 1rem;
+}
+@media (min-width: 45em) {
+  .footer .navigation .images .logo {
+    margin-top: 0;
+  }
 }
 .footer .navigation .images .logo svg .text {
   fill: var(--clr-neutral-100);
