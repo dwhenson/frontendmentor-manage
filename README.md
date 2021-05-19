@@ -15,7 +15,7 @@ Users should be able to:
 
 ## Lessons learnt
 
-    - 💡 Carousels seem a mess to me. Difficult to create, but more importantly not good from a UI perspective as they hide content. It would take me so long to even approach making the one included here accessible that I didn't really try.
+- 💡 Carousels seem a mess to me. Difficult to create, but more importantly not good from a UI perspective as they hide content. It would take me so long to even approach making the one included here accessible that I didn't really try.
 
 ## Resources
 
