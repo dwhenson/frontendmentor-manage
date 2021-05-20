@@ -16,6 +16,18 @@ Users should be able to:
 ## Lessons learnt
 
 - 💡 Carousels seem a mess to me. Difficult to create, but more importantly not good from a UI perspective as they hide content. It would take me so long to even approach making the one included here accessible that I didn't really try.
+- I used the following code to enable the carousel only at small scree sizes. It was more complicated than I had hoped as I needed to set this up in a JS file before the carousel component was created:
+
+```const width = window.matchMedia("(max-width: 45em)");
+if (width.matches) {
+	console.log(siemaContainerTest);
+	siemaContainerTest.classList.add("siema");
+}
+```
+
+## Future learning
+
+- 🙇‍♂️ I need to understand JS modules, and import and export to better structure my JS files. As I am now getting to the stage where I am asking JS to do multiple things on a page a better structure is needed.
 
 ## Resources
 
