@@ -32,6 +32,10 @@
 		&:hover:not(.cta) {
 			color: var(--clr-primary-100);
 		}
+
+		&[aria-current="page"] {
+			color: var(--clr-primary-100);
+		}
 	}
 
 	.navigation {
@@ -50,9 +54,9 @@
 			}
 
 			.logo {
+				margin-top: 2rem;
 				margin-right: auto;
 				margin-left: auto;
-				margin-top: 2rem;
 
 				@include respond-to("medium") {
 					margin-top: 0;
