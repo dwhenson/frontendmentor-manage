@@ -1,3 +1,9 @@
+const siemaContainerTest = document.querySelector("#text");
+const width = window.matchMedia("(max-width: 45em)");
+if (width.matches) {
+	siemaContainerTest.classList.add("siema");
+}
+
 !(function (e, t) {
 	"object" == typeof exports && "object" == typeof module
 		? (module.exports = t())

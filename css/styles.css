@@ -494,8 +494,8 @@ main:focus {
   }
 }
 .intro img {
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
 }
 @media (min-width: 45em) {
   .intro img {
